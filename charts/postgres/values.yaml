@@ -1,0 +1,18 @@
+namespace: postgres
+image:
+  repository: postgres
+  tag: "15"
+  pullPolicy: IfNotPresent
+
+service:
+  port: 5432
+
+env:
+  POSTGRES_DB: "appdb"
+  POSTGRES_USER: "appuser"
+  POSTGRES_PASSWORD: "changeme"
+
+resources: {}
+nodeSelector: {}
+tolerations: []
+affinity: {}

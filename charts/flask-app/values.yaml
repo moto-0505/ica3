@@ -1,0 +1,25 @@
+namespace: flask
+replicaCount: 1
+
+image:
+  repository: your-dockerhub-username/flask-app
+  tag: "v1"
+  pullPolicy: IfNotPresent
+
+service:
+  type: ClusterIP
+  port: 5000
+
+env:
+  POSTGRES_HOST: "postgres.postgres.svc.cluster.local"
+  POSTGRES_DB: "appdb"
+  REDIS_HOST: "redis.redis.svc.cluster.local"
+
+secretEnv:
+  POSTGRES_USER: "appuser"
+  POSTGRES_PASSWORD: "changeme"
+
+resources: {}
+nodeSelector: {}
+tolerations: []
+affinity: {}

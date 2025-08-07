@@ -1,0 +1,13 @@
+namespace: redis
+image:
+  repository: redis
+  tag: "6"
+  pullPolicy: IfNotPresent
+
+service:
+  port: 6379
+
+resources: {}
+nodeSelector: {}
+tolerations: []
+affinity: {}
