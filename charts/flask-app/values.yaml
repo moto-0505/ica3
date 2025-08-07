@@ -2,7 +2,7 @@ namespace: flask
 replicaCount: 1
 
 image:
-  repository: your-dockerhub-username/flask-app
+  repository: kubemisbha/flask-app
   tag: "v1"
   pullPolicy: IfNotPresent
 
