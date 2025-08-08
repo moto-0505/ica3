@@ -2,8 +2,8 @@ namespace: flask
 replicaCount: 1
 
 image:
-  repository: kubemisbha/flask-app
-  tag: "v1"
+  repository: kubemisbah/flask-app
+  tag: "v1.1"
   pullPolicy: IfNotPresent
 
 service:
